@@ -6,38 +6,62 @@ package lab2;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroJavaCourse {
-    String courseName;
+public class IntroJavaCourse implements ProgrammingCourse{
+    
+    private String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
+
+    public final String getCourseName() {
+        return courseName;
     }
 
-    public String getCourseNumber() {
+
+    public final void setCourseName(String courseName) {
+        if(courseName == null || courseName.length() == 0) {
+            msg.CourseNameErrMsg();
+            System.exit(0);
+        }
+        this.courseName = courseName;
+    }
+
+
+    public final String getCourseNumber() {
         return courseNumber;
     }
 
-    public void setCourseNumber(String courseNumber) {
+    
+    public final void setCourseNumber(String courseNumber) {
+        if(courseNumber == null || courseNumber.length() == 0) {
+            msg.CourseNumErrMsg();
+            System.exit(0);
+        }
         this.courseNumber = courseNumber;
     }
 
-    public double getCredits() {
+
+    public final double getCredits() {
         return credits;
     }
 
-    public void setCredits(double credits) {
+    public final void setCredits(double credits) {
+        if((credits%.5 != 0) || credits < 0.5 || credits > 4.0) {
+            msg.CreditErrMsg();
+            System.exit(0);
+        }
         this.credits = credits;
     }
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
-    public void setPrerequisites(String prerequisites) {
+    public final void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            msg.PreReqErrMsg();
+        }
         this.prerequisites = prerequisites;
     }
 
