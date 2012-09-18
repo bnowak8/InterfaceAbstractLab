@@ -15,11 +15,15 @@ public class Start {
     advJava.setCredits(4);
     advJava.setPrerequisites("Intro To Programming, Intro to Java");
     
-        System.out.println("Course Name: " + advJava.getCourseName() +
-                    "\nCourse Number: " + advJava.getCourseNumber() +
-                    "\nCredits: " + advJava.getCredits() +
-                    "\nPrerequisites: " + advJava.getPrerequisites() + "\n");
-   
+    
+    //Used just to show the functuallity////////////////////////////////
+    
+    System.out.println("Course Name: " + advJava.getCourseName() +
+             "\nCourse Number: " + advJava.getCourseNumber() +
+             "\nCredits: " + advJava.getCredits() +
+             "\nPrerequisites: " + advJava.getPrerequisites() + "\n");
+   /////////////////////////////////////////////////////////////////////
+    
    introJava.setCourseName("Intro To Java");
    introJava.setCourseNumber("2");
    introJava.setCredits(3.0);

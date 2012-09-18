@@ -14,7 +14,7 @@ public abstract class ProgrammingCourse {
     private String courseName;
     private String courseNumber;
     private double credits;
-
+    private String prerequisites;
     Messages msg = new Messages();
 
     public final String getCapitalizedCourseName() {
@@ -54,5 +54,15 @@ public abstract class ProgrammingCourse {
             msg.CourseNumErrMsg();
         }
         this.courseNumber = courseNumber;
+    }
+        public String getPrerequisites() {
+        return prerequisites;
+    }
+
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            msg.PreReqErrMsg();
+        }
+        this.prerequisites = prerequisites;
     }
 }

@@ -11,7 +11,7 @@ Instructions for Lab #2:
 1. Which should come first, the interface or the abstract class? You need
    to justify your choice by adding comments to the super classes.
 2. Which super class methods should be concrete vs. abstract in the abstract
-   super class? Justify your choices by adding comments to each method.
+    super class? Justify your choices by adding comments to each method.
 3. Which properties should be declared in the abstract super class and which
    should be declared in the course sub classes? Justify your choices by 
    adding comments to the property declarations.
