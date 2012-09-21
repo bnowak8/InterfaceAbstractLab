@@ -10,9 +10,16 @@ public class IntroJavaCourse implements ProgrammingCourse{
     
     private String courseName;
     private String courseNumber;
-    private double credits;
+    private double credits, creditLow = .5, creditHigh = 4.0;
     private String prerequisites;
-
+    
+    public IntroJavaCourse(String name, String num, double credits, String prereq) {
+        
+        this.courseName = name;
+        this.courseNumber = num;
+        this.credits = credits;
+        this.prerequisites = prereq;
+    }
 
     public final String getCourseName() {
         return courseName;
@@ -22,7 +29,6 @@ public class IntroJavaCourse implements ProgrammingCourse{
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             msg.CourseNameErrMsg();
-            System.exit(0);
         }
         this.courseName = courseName;
     }
@@ -36,7 +42,6 @@ public class IntroJavaCourse implements ProgrammingCourse{
     public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
             msg.CourseNumErrMsg();
-            System.exit(0);
         }
         this.courseNumber = courseNumber;
     }
@@ -47,9 +52,8 @@ public class IntroJavaCourse implements ProgrammingCourse{
     }
 
     public final void setCredits(double credits) {
-        if((credits%.5 != 0) || credits < 0.5 || credits > 4.0) {
+        if((credits%.5 != 0) || credits < creditLow || credits > creditHigh) {
             msg.CreditErrMsg();
-            System.exit(0);
         }
         this.credits = credits;
     }

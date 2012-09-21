@@ -9,7 +9,7 @@ public class Start {
     IntroJavaCourse introJava = new IntroJavaCourse();
     IntroToProgrammingCourse introProgramming = new IntroToProgrammingCourse();
     
-    
+
     advJava.setCourseName("Advanced Java");
     advJava.setCourseNumber("1");
     advJava.setCredits(4);

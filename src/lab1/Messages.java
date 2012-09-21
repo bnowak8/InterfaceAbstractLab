@@ -1,35 +1,32 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab1;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author mashit
- */
+
 public class Messages {
+    private double creditLow = .5, creditHigh = 4.0;
     
-    public void PreReqErrMsg(){
+    
+    public final void PreReqErrMsg(){
     JOptionPane.showMessageDialog(null,
                     "Error: prerequisites cannot be null of empty string");
     System.exit(0);
 }
-    public void CreditErrMsg(){
+    public final void CreditErrMsg(){
     JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
+                    "Error: credits must be in the range " + creditLow + " to " 
+                    + creditHigh);
     System.exit(0);
     }
     
-    public void CourseNameErrMsg(){
+    public final void CourseNameErrMsg(){
     JOptionPane.showMessageDialog(null,
                     "Error: Course Name cannot be null of empty string");
     System.exit(0);
     }
     
-    public void CourseNumErrMsg(){
+    public final void CourseNumErrMsg(){
     JOptionPane.showMessageDialog(null,
                     "Error: Course Number cannot be null of empty string");
     System.exit(0);

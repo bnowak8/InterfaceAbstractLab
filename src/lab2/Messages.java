@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
  * @author mashit
  */
 public class Messages {
+    private double creditLow = .5, creditHigh = 4.0;
     
     public void PreReqErrMsg(){
     JOptionPane.showMessageDialog(null,
@@ -19,7 +20,8 @@ public class Messages {
 }
     public void CreditErrMsg(){
     JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
+                    "Error: credits must be in the range " + creditLow + " to " 
+                    + creditHigh);
     System.exit(0);
     }
     

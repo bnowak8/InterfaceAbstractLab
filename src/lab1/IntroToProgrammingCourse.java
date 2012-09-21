@@ -9,19 +9,11 @@ package lab1;
  * @version     1.00
  */
 public class IntroToProgrammingCourse extends ProgrammingCourse {
-    private String prerequisites = "None";
+
     public IntroToProgrammingCourse(){
-        
+        this.setPrerequisites("none");
     }
     
-    @Override
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-    
-    @Override
-    public void setPrerequisites(String prerequisites) {
-        this.prerequisites = "None";
-    }
+ 
     
 }

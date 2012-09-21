@@ -1,19 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab1;
 
-/**
- *
- * @author mashit
- */
+
 public abstract class ProgrammingCourse {
    
     
     private String courseName;
     private String courseNumber;
-    private double credits;
+    private double credits, creditLow = .5, creditHigh = 4.0;
     private String prerequisites;
     Messages msg = new Messages();
 
@@ -24,7 +18,7 @@ public abstract class ProgrammingCourse {
 
     public final void setCredits(double credits) {
 
-        if((credits%.5 != 0) || credits < 0.5 || credits > 4.0) {
+        if((credits%.5 != 0) || credits < creditLow || credits > creditHigh) {
             msg.CreditErrMsg();
         }
         this.credits = credits;
@@ -55,7 +49,7 @@ public abstract class ProgrammingCourse {
         }
         this.courseNumber = courseNumber;
     }
-        public String getPrerequisites() {
+    public String getPrerequisites() {
         return prerequisites;
     }
 

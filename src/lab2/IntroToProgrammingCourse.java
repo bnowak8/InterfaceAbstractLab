@@ -10,8 +10,14 @@ package lab2;
 public class IntroToProgrammingCourse implements ProgrammingCourse {
     private String courseName;
     private String courseNumber;
-    private double credits;
+    private double credits, creditLow = .5, creditHigh = 4.0;
 
+    public IntroToProgrammingCourse(String name, String num, double credits) {
+        
+        this.courseName = name;
+        this.courseNumber = num;
+        this.credits = credits;
+    }
 
     public final String getCourseNumber() {
         return courseNumber;
@@ -30,7 +36,7 @@ public class IntroToProgrammingCourse implements ProgrammingCourse {
     }
 
     public final void setCredits(double credits) {
-        if((credits%.5 != 0) ||credits < 0.5 || credits > 4.0) {
+        if((credits%.5 != 0) ||credits < creditLow || credits > creditHigh) {
             msg.CreditErrMsg();
             System.exit(0);
         }
